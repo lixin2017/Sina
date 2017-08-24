@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/base.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/sina_index.js" ></script>
+		<title>新浪网仿写</title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-top">
+				<div class="header-top-left">
+					<div class="tn-tab">
+						<a href=#>设为首页</a>
+					</div>
+					<div class="tn-tab">
+						<a target="_blank" href="http://tech.sina.com.cn/z/sinawap/">手机新浪网</a>
+					</div>
+					<div class="tn-tab link-list">
+						<a href=#>移动客户端</a>
+						<i></i>
+						<div class="tn-topmenulist">
+							<ul class="tn-text-list">
+								<li><a target="_blank" href="http://m.weibo.com/web/cellphone.php#iphone" >新浪微博</a></li>
+								<li><a target="_blank" href="http://m.sina.com.cn/m/sinahome.shtml">新浪新闻</a></li>
+								<li><a target="_blank" href="http://m.sina.com.cn/m/sinasports.shtml">新浪体育</a></li>
+								<li><a target="_blank" href="http://m.sina.com.cn/m/sinaent.shtml">新浪娱乐</a></li>
+								<li><a target="_blank" href="http://finance.sina.com.cn/mobile/comfinanceweb.shtml" >新浪财经</a></li>
+								<li><a target="_blank" href="http://api.ggt.sina.com.cn/download/download.html">新浪港股通</a></li>
+								<li><a target="_blank" href="http://blog.sina.com.cn/lm/z/app/">新浪博客</a></li>
+								<li><a target="_blank" href="http://tianqitong.sina.cn/">天气通</a></li>
+								<li><a target="_blank" href="http://games.sina.com.cn/o/kb/12392.shtml">新浪游戏</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header-top-right">
+					<div class="tn-tab">
+						<a href=#>登录</a>
+					</div>
+					<div class="tn-tab">
+						<a target="_blank" href="http://weibo.com">微博</a>
+					</div>
+					<div class="tn-tab">
+						<a target="_blank" href="http://login.sina.com.cn">博客</a>
+					</div>
+					<div class="tn-tab">
+						<a target="_blank" href="http://mail.sina.com.cn">邮箱</a>
+					</div>
+					<div class="tn-tab">
+						<a target="_blank" href="http://news.sina.com.cn/guide/">网站导航</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-search">
+			<div class="logo">
+				<img src="img/LOGO.png"> 
+			</div>
+			<div class="top-search">
+				<form name="SearchEcho" onsubmit="return SearchSubmit()">
+					<div class="sim-select">
+						<select id="slt_01" autocomplete="off">
+							<option value="新闻" selected="selected">新闻</option>
+							<option value="微博">微博</option>
+							<option value="图片">图片</option>
+							<option value="博客">博客</option>
+							<option value="视频">视频</option>
+						</select>													
+					</div>
+					<div class="search-box">
+						<input type="text" value="请输入关键字"/>						
+					</div>	
+					<div class="search-submit">
+						<input id="search-submit" type="submit" value=" "/>
+					</div>					
+				</form>
+			</div>
+			<div class="weather-message">
+				<a id="weatherBox" href="http://weather.sina.com.cn/xian" target="_blank">
+					<span class="now-wea-city" title="西安">西安</span>
+					<span class="now-wea-i">
+						<img src="img/weather.png" />
+					</span>
+					<span class="now-wea-city" title="西安">24℃</span>
+				</a>
+			</div>
+			<div class="advert-top">
+				<a class="advert-top-left" href="http://news.sina.com.cn/pc/2014-10-30/326/3095.html" target="_blank">
+					<img src="img/广告.jpg" />
+				</a>
+				<a class="advert-top-right" href="http://jubao.china.cn:13225/reportform.do" target="_blank">
+					<img src="img/广告2.png" />
+				</a>
+			</div>
+		</div>
+		
+		<!--
+        	作者：1289885769@qq.com
+        	时间：2017-08-20
+        	描述：主页面开始
+        -->
+        <div class="main-content">
+        	<div class="main-nav">
+        		<div class="nav-mod-1">
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>新闻</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">军事</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">社会</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">国际</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>财经</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">股票</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">基金</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">外汇</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>科技</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">手机</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">探索</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">众测</a>
+        				</li>
+        			</ul>
+        		</div>
+        		        		
+        		<div class="nav-mod-1">
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>体育</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">NBA</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">中超</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">英超</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>娱乐</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">明星</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">电影</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">星座</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>汽车</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">报价</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">买车</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">新车</a>
+        				</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="nav-mod-1">
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>博客</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">专栏</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">文史</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">天气</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>视频</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">综艺</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">VR</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">直播</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>房产</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">二手房</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">家居</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">收藏</a>
+        				</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="nav-mod-1">
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>时尚</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">女性</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">健康</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">育儿</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>教育</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">出国</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">公益</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">佛学</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>图片</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">读书</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">情感</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">司法</a>
+        				</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="nav-mod-1">
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>城市</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">鲜城</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">陕西</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">English</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>旅游</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">航空</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">彩票</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">高尔夫</a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>游戏</b></a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">页游</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">手游</a>
+        				</li>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank">SHOW</a>
+        				</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="nav-mod-right" >
+        			<ul>
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>微博</b></a>
+        				</li>
+        			</ul>
+        			<ul> 
+        				<li>
+        					<a href="http://news.sina.com.cn/" target="_blank"><b>邮箱</b></a>
+        				</li>
+        			</ul>
+        			<ul>
+        				<li class="link-more" >
+        					<a id="more-button" href="javascript:void(0)">更多<i></i></a>
+        					<div id="more-list">
+        					<ul >
+        						<li><a href="http://gov.sina.com.cn/" target="_blank">政务</a></li>
+        						<li><a href="http://chexian.sina.com/" target="_blank">车险</a></li>
+        						<li><a href="http://search.sina.com.cn/?c=more" target="_blank">搜索</a></li>
+        						<li><a href="http://help.sina.com.cn/" target="_blank">客服</a></li>
+        						<li><a href="http://news.sina.com.cn/guide/" target="_blank">导航</a></li>
+        					</ul>
+        					</div>
+        				</li>        			
+        			</ul>
+        		</div>
+        	</div>
+        	
+        	<div class="top-ads">
+        		<div class="top-ads-1">
+        			<ul>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=72JaP&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3Dr4ZXbS1I%2CPdrzHZOCvB%2Fu8OHMqlR5j7ul0kt%2CKeMYncx%2Fzvzb1EWPqo9c4dQKrmlLkqtTnKyJuu9eH8Cwe6sZwWEkGr3tdTv4NVAYz%2CIBe9jdgSql3v3qiyKTvcxYOhzfPFR0QHFa3XWiALmtBziNTXEg0EtWEJzBF%2CNWW47UF3qWl8BjxUF%2FzRuu89IbjkOZKoM4nL8NeHfLVX2UosKrHgIIQqd1Q98FBoDl5lhvHMtpSSHeMONCCbMrkRuRFpdebjknL1UetCdl1aq7Rqz0J5XjON9tDG9v80tastmios%3D%26b%3D3" target="_blank">空调房怎么装更凉快</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71dZm&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DW50IFGU%2FQ8ktwwZHq8Sz9Z%2F6a46on4MQbIV3Xl2WInvfYL%2FhueucHXC3ESKe5w%2CCyvLKU%2F%2CmG9SycLr0WNfcfpDuwcniAvMRzC8ndgSzuenfxW%2CVxbGR3MawfPYH6xITSRALu9y55TlC1wfcWv%2F3irjCj0hNWKTw5SBEb%2FFxRltQDMKYkGYrbHjdrajZJeNSJXEBhs8fCp47nH%2CTs3bKc96ZadgpJcDzUkFCBcPiopQgZ%2FDAtBQOCOwlWeR6E4xa%26b%3D3" target="_blank">海外那些事他全知道</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2056594&amp;p=78LWf&amp;dx=__IPDX__&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;xa=__ADPLATFORM__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DAcg9DB5kl0iH8yLykYGG9NOx5EwcdPoJPE2WO%2CT3ZihPuKDbrcKGWUScltg0IWhTgevcbYqS8kDwythXULXowgrsZrVV%2F5RmwCGd%2CldA7T3fwEJck0aoFrRwyJU52hhhYVu6kh28gHT7TGjj5euxCXd2aB9n1zPIjdb1jd6dQY%2FzrQ0Bh7oTqaWWTJCIdLFFup%2F%2CuxbQQJqey9YBRJ%2CkHTNkJSaoCM4d9jK8AXDwRlvVhudAw7SMAjEENoQCQiecoNDL5YIFt%2C7Z5ma%2FuFzXX1vw3jAejIvUkgVnx5ngNMk%3D%26b%3D3" target="_blank">碧桂园业绩发布</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71F72&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3D1%2CoYG%2CQoRk6wsZpu5bN8WC50lXSl4VhHlaIgONwZ5O8WmVASTv35Tto7iBvRuWWtQSZ1E6zeHObxH2DN63TUOk5tgwnqiHd2B5%2FmpWIy3tYqK%2CzXutNs7bh%2CnsvZBnWZ3Gdr%2F%2FUHouKPIYPoFtJMBSixdOj1KglO%2Cdoa9B6eSmmDOa0km6X4%2FSr9EBGcKIQJIhiOWhslhfXFWAVOwvDY5nXuGlDCvtL2pQCAq0WiJ4T1RsJa%2FvOsx8H4bayl%2F0GGXJVrW3Mx4Tz27i2MMtsiITiqRuUXTXNiljMGkvPvh5c%3D%26b%3D3" target="_blank">请输入你家房子面积</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71DKL&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3D9xsM2KxoQ9ze7S2LUUfcSnMcjNQNPYH6%2C84pujeNr1LDb2OI1xLUJGxbTSK%2F%2Cp64CDDeb2mikkVSDfKqxn1F%2FWpeCSASr6p%2CqG8EM%2FZD7q4QMV2jCJvOQXGZnGnLMvOUOzDXSVk10djxN84mufFT55UBGAD0w9wSd3rsCOruSp6ADuSfvuF33kZX0rF%2FnaQU7QRE7ywbNKx13dKDpCfz7sfWrj0HYXniTbUWWvNGHT8gr34gFspmPbVmh6g0Az3Qdu9UFfJsogx8BClwmCU%2CvcKIqE6RPeO4jmGNMQ4vmU0%3D%26b%3D3" target="_blank">装房子不要花冤枉钱</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71DKM&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DcKXPDMFyxl6UQV5F39BcKimfDNP5z94joBj5dRmNG5jZ5fAh59u%2CbEx4H%2CbM4Lt3sc3WfkSVxKcMHTqfIc4kmI0uO4L7ltJC848769GOE35wVOYC8EbsXOYjDy%2FhURi%2CX1nTJwoXNuUpi0lpgNv1Er7%2FSCPjQFMffCxFN10BLvPJ8sP5tHK%2ClGNXzuzrEMiO55Ae892qFA4HwxovPuIcUQKhD1ov0z5Of6akcn6Vv3tFrRtKqwqIQiJZ3eybDZeyaHL4f5Ni3YeK4H6GcZ5Hdx9J2sj0JhkPJDdnlg6S0jQ%3D%26b%3D3" target="_blank">夏天如何享舒适厨房</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=72Jax&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DZSasmaypNqOA%2CJn3UfG%2FI332peuIt2oPANxLIIwBEf8J%2CT0yqXmEYkeo7flvnEA9plKsAEpycpmTy2FNDxpGwsMtGptQ716FP9xgJqyJRSA8takoJCTsDSjCDVN03P%2FBmTVgkphkN71KyxveYUgOIjpFKHO8stZWgNVaqHu0sk6Gou2EjThwbB1qlMWzyD3JVk6KM%2Caqobwv0%2CydVkGyKqPh%2Ck4yNoi6abu%2CwVf7p600BO2wivuHsh5LeKCo4p2Hj9X835oqYEFC%2FhLFT9lrc%2FjSz%2F5a1Bx8jP6mijVs5wc%3D%26b%3D3" target="_blank">8块钱竟然可以开工</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=73xv2&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DShoCqNjmD92sRqUSWpMCS0GWI2%2FVcCxUsijsdglDmNecXUuZNTa5sd87Nz7dNoYR8tGRYrZ3oaE1UxeIySQ%2FAnltBgV485FG1C4Fkfagas82X4jXdsVCXcUpQlztk1ZTjV2Fgp%2CjVBa7JKeSAB7RasLvU6SP%2Ci7hDvpT2SoK8KkqRXeI7STsbnIFxTYud02OfdFVzRB06vkimkjAMAhWcH%2CbPsN4itkfLKKFSqazvgPRVDs49dyOMQoafe1na8eo%2CkAR89Tfm6bT0jEZ2UFLjHW01eyq1f49tkdkgSBG8lk%3D%26b%3D3" target="_blank">硬装软装全包需注意</a></li>
+        			</ul>
+        		</div>
+        		
+				<div class="top-ads-1">
+        			<ul>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71RVu&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3D0YlS8bK8HC63zuht8Lcqje7K64eTjkYY4k3jZN3inhQbeWnzElhoFD5ENt3cTADr3zJhThu6OkuGQgTUm3cSfo5UQzfoX%2FvKC7oZZcDQxHOoUCQ%2CmO1cnkSsrzCJ0k%2C6%2Cuz%2CLlYaNvie1tZKbof8hM%2CWUPQJpTcapytgl9vC97VKzdM1Aro9e6YOzUuTZHjbNgh2GvGgdLKWOhmfQMC3dw%3D%3D%26b%3D3" target="_blank">小开间也能精装修</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71dZo&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DQnjpT0hK15ySvLDvXflNwFT%2CBILtjbqD7tUN%2F22OuCgS7rNp%2CGYgagAqJ9e5WP61cAx%2CztH78Ea3D4aju9fa1u4mxJZCU1pgHJh%2FEMyVF5i19N1EYhp3gG5kvi6um1g8dj5Qaa1nPLoEKZs1Mnnp5ouqCHUVlYIXeh732Z2VG%2ClgL658w0469LZ9zaRofC9J6%2FQ%2FYjvlkci8BTB8mNYIaaEig%2CL0z68na8IxbtC5cOzjm2kogFSuJ0j5e45gjpNrNGTV0y5RY29%2FN%2CeWNWAqw7rFxd09Hd8Qyh1TsKV%2C3WM%3D%26b%3D3" target="_blank">房子这样装居然省钱</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71dZq&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DOj%2Fir4YMz6SKMG44XUFcBnjQ5Dn%2CVc%2CLaYfyFUazgsC5XT%2ChGovYCWx4deGNHaD5j8VQEve9KJaLmdW763Qdbaw01h4f7GosNYTay0dc5378X48Vjs43RLWbJsCOD6OLjvsgF4PJGpqzPht%2Cu%2ClL12kGymheFf1OvkFfGMdbSCnPY5ZulG7NJQ8nRTrdnkPxUrdebwVIUBFVDHSgMWEyUeZTYA2px4pbpRPr7%2CzE2HZLeXGZ3SisH8qaPZJnvTnfm2mnE4XpSDq3vhWm1jbXE%2FPsjei88vkDo1S2ahAvhX0%3D%26b%3D3" target="_blank">定装修没想象那么难</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71FAT&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DSHJAmqoXu6Mo2OFYHPgXcKNhsxJtTCsAOE5%2CORlf%2F%2COsG6%2CXJvBIdo134ulhsqna7Vwr%2CZyYA30ZuCkJNwRpqTi6d2mM83uZEhC4QZ2CxzCmKsFc0c%2Cbg0ASS1lByUV3%2FLaTPc%2CwRl%2Frh33Z3Ecmgyxz%2ChY3%2Cnoa1%2CwpHuStXP%2CpKWaUTm5d%2Fmc9jNElHCmP2NeSroiDAi%2FrM0vxHvmn213vVyL0SrMEViDHi%2FytuKrw80fhIr1goiKCNU5UzQ4sMvzvmPrBte%2F0IMO10Vytv0zMI%2CXwcNFPGbvJMwHnbKE%3D%26b%3D3" target="_blank">这个活动线上燃爆啦</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71kSU&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DQMFkIUYRkwIderFwAcDGP3vy2FTcF9K8TESZQZvcdlNdbKHOBSdcSCEoZzwurmZY3Aqc3SHWaMKhTBiBAcPNJCySVmySxxSM7tdAdQYTU2Gkx72osv9AyzJmdYC76qYlQHUGjeOCNFk12nCHQFy4sBLhvlQYnLe1oeuYuFEpZr%2FyD%2C56X4BHqm6kZ1GTpMc0sew783cMcwS6JC7R2gupDmVWEHxdIKDYLMh70xxi0tg2VR0QYiupw8RmO6pwDqsPxJlS8ikQ4oi82yTJj2%2CxHMA%2FZUY%2FKCerTuLb%2F74fYO4%3D%26b%3D3" target="_blank">春风十里不如她的家</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71dZt&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3D9kyf3yTHjCzVln6QG72k7VqewJ6P%2CYGIbMv1w56k2ku9umx%2C86Hth%2CbJcAnvJfEMddQfNiKH3RcxC%2Fn3Q%2C6j7YXau9H%2FmUX72Wzq4dceHf3bfUvX8vmautswhR8EpfQ8XeA7R%2FVaCo0HpUpZprvCyjS4%2C%2FoLbKxrtJuVsZGzZNf4%2FrpMG%2FEQt8HZL50IvvZp1Xe1%2F%2FZlmM6s3lfp7D5FTA%3D%3D%26b%3D3" target="_blank">海外活动 一网收罗</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71dZr&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DTw4RIIOF4n3UrpZUnjk9K3fglA5xrZe7QYuRovgJ%2CWOnhAnpYvh7w8AuLLbOUyIKT%2Cv3nqcujNsjNISdtj6KsNMJEztYfEfYCpSbzgskpl99epfvf%2CdjNBIZyPch4x0e3AwFZqNi%2FDtfFpOaT4w8ut7oGUwFbAKWWBELfZmZh24lweiT%2CT3DMfUzM6qx7gP7%2FnA5dHPxaRlh3fl1%2FKwgh8jLT9%2FkTYViCdL2NsRQqhLRc%2FRdl%2F3y8EMXQ1hf085kch4QfjWS3Zf7CGnOixgaqhDxF7K7887PJNOzVCOJeF8%3D%26b%3D3" target="_blank">装修前不看这个会哭</a></li>
+        				<li><a href="http://e.cn.miaozhen.com/r/k=2022917&amp;p=71DPl&amp;ro=sm&amp;dx=0&amp;rt=2&amp;ns=__IP__&amp;ni=__IESID__&amp;v=__LOC__&amp;nd=__DRA__&amp;np=__POS__&amp;nn=__APP__&amp;o=http%3A%2F%2Fclick.leju.com%2F%3Fi%3DQ0Kw3PUZ4vXao3pFrsZ%2Cu1qeWebgpAqsIzV5VOMrupv6juRVly11Ed9fiwS%2FMRVFk5m2p7yTow7sY%2C1IUzdnFvQJjKHBJu0EmNPmEpGCUAKJ5KC97YNZt21F7yf9mPyp29sNz60Da3wtifU2qILOXK3whh1zQCSADIR5xApsiP5oks9Eou03yFhOpOTTwR8unZyfYLJmg6rBfnIhwYODAGUHovdVLwCz7d0UleXMhQ%2CbVpPZVYQC8dtUYIieAX5rnicQJ65wWIhnOIYqJsmleZebIMCFRZZjHY6Rwti7%2F9UhZImayi4gvT0F%2CUGQrRmIzIAUDqo7zsj%2FSjInLRTa%2Cw%3D%3D%26b%3D3" target="_blank">新房装修38天完工</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	
+        	<div class="part-a">
+        		<div class="part-a-l">
+        			<div class="mod-01">
+        				<div class="ads-gif">
+        					<img border="0" src="img/ads.gif" style="width:240px;height:47px;border:0" alt="//d2.leju.com/ia/2017/08/21/f599a966fd47f0img.gif">
+        				</div>
+        				<div class="ads-pic-roll">
+        					<div class="picRoll">
+        						<ul class="imglist">
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (1).jpg" alt="1"</a></li>
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (2).jpg" alt="2"</a></li>
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (3).jpg" alt="3"</a></li>
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (4).jpg" alt="4"</a></li>
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (5).jpg" alt="5"</a></li>
+        							<li><a href="#" target="_blank"><img src="img/ads-pic/ads (6).jpg" alt="6"</a></li>
+        						</ul>		
+        					</div>
+        				</div>
+        			</div>
+        			
+        			<div class="blank-cont" style="height:8px;"></div>
+        			
+        			<div class="mod-02">
+        				<div class="tit01">
+        					<h3><a href="http://m.sina.com.cn/" target="_blank">新浪产品</a></h3>
+        					<span class="mod-guess-control">
+                            	<a class="mod-guess-prev" href="javascript:;" id="SI_products_arrow_l" title="上一帧" hidefocus="true">上一帧</a> 
+                            	<a class="mod-guess-next" href="javascript:;" id="SI_products_arrow_r" title="下一帧" hidefocus="true">下一帧</a>
+                        	</span>
+        				</div>
+        				
+        				<div class="item-sina-products">
+        					<div class="isp-head">     						
+        						<a id="isp-title" href="http://data.auto.sina.com.cn/" target="_blank">车型大全</a>
+        						<span class="clearfix"><a target="_blank" href="http://auto.sina.com.cn/car_manual/index.d.html">购车完全指南</a></span>
+        					</div>
+        					<div class="isp-content">
+        						<div class="auto-price">
+        							<table width="100%" cellspacing="0" cellspadding="0">
+                                        <tr>
+                                            <td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=5-8&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">5-8万</a></td>
+                                            <td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=8-11&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">8-11万</a></td>
+                                            <td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=11-15&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">11-15万</a></td>
+                                            <td class="taR"><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=15-20&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">15-20万</a></td>
+										</tr>
+                                        <tr>
+                                        	<td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=20-25&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">20-25万</a></td>
+                                            <td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=25-35&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">25-35万</a></td>
+                                            <td><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=35-50&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">35-50万</a></td>
+                                            <td class="taR"><a href="http://data.auto.sina.com.cn/#global:::orderby=pv&amp;seq=desc&amp;price=100-9999999&amp;type=&amp;outgas=&amp;country=&amp;color=&amp;gear_box=&amp;config=&amp;seat_num=&amp;cheshen=&amp;hezi=&amp;drive=&amp;fuel=&amp;page=1&amp;limit=18&amp;callback=" target="_blank">更多价格</a></td>    
+                                        </tr>
+									</table>
+        						</div>
+        						<div class="isp-auto-type">
+                                    <ul class="clearfix">
+                                        <li class="type_2"><a href="http://data.auto.sina.com.cn/a0/" target="_blank"><img src="img/汽车icon/小型车.png"></br></span><em>小型</em></a></li>
+                                        <li class="type_3"><a href="http://data.auto.sina.com.cn/a/" target="_blank"><img src="img/汽车icon/紧凑型.png"></br></span><em>紧凑型</em></a></li>
+                                        <li class="type_4"><a href="http://data.auto.sina.com.cn/b/" target="_blank"><img src="img/汽车icon/中型.png"></br><em>中型</em></a></li>
+                                        <li class="type_7 last"><a href="http://data.auto.sina.com.cn/suv/" target="_blank"><img src="img/汽车icon/SUV.png"></br><em>SUV</em></a></li>
+                                     </ul>
+                                </div>
+                                <div class="isp-auto-compare">
+                                    <a class="btn-compare01" href="http://data.auto.sina.com.cn/" target="_blank">品牌大全</a>
+                                    <a class="btn-compare02" href="http://auto.sina.com.cn/car_manual/index.d.html" target="_blank">购车指南</a>
+                                    <a class="btn-compare03" href="http://photo.auto.sina.com.cn/" target="_blank">高清实拍</a>
+                                </div>
+        					</div>
+        				</div>
+        			</div>       				
+        		</div>
+        		
+        		<div class="part-a-m">
+        			<div class="mod-04">
+        				<div class="mod-04-head">
+        					<div class="order-menu">
+        						<span class="no-bl head-selected"><a href="http://photo.sina.com.cn/" target="_blank" >图片</a></span>
+        						<span class="no-bl"><a href="http://photo.sina.com.cn/" target="_blank" >专栏</a></span>
+        						<span class="no-bl"><a href="http://photo.sina.com.cn/" target="_blank" >热点</a></span>
+        					</div>
+        				</div>
+        				<div class="mod-04-content">
+        					<div class="tab-cont-out">
+        						<div class="tab-cont1">
+        							<div class="pic-list">
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist1.jpg"><span>沪数万共享车堆积</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist2.jpg"><span>最强台风登陆现场</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist3.jpg"><span>美女休学卖旗袍</span>	
+        								</a>
+        							</div>
+        							<div class="pic-content-list">
+        								<ul class="list-a">
+        									<li>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/s/slide_1_2841_198478.html" class="liveNewsLeft photoNewsLeft">轿车堵门被吊上房顶</a>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/s/slide_1_2841_198464.html">8男抢玛莎拉蒂半路没油被抓</a>
+        									</li>
+        									<li>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/w/slide_1_2841_198469.html" class="liveNewsLeft photoNewsLeft">美国两高速列车相撞42伤 </a>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/s/slide_1_2841_198467.html">95后直播卖石榴月售18万</a>
+        									</li>
+        									<li>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/w/slide_1_86058_198492.html" class="liveNewsLeft photoNewsLeft">他们是印度首对变性夫妻</a>
+        										<a target="_blank" href="http://slide.news.sina.com.cn/slide_1_86058_198409.html">1只蟋蟀卖5万年创收过亿</a>
+        									</li>
+        									<li>
+        										<a class="photoNewsLeft linkRed01" target="_blank" href="http://slide.fashion.sina.com.cn/s/slide_24_84625_97623.html">“浆糊”小姐姐粉靴秀美腿</a>
+        										<a target="_blank" href="http://slide.fashion.sina.com.cn/s/slide_24_84625_97547.html" class="linkRed01">冯绍峰演绎极简优雅</a>
+        									</li>
+        								</ul>
+        							</div>
+        						</div>	
+        							<!--
+                                    	作者：1289885769@qq.com
+                                    	时间：2017-08-23
+                                    	描述：新闻切换
+                                    -->
+                                <div class="tab-cont2">
+        							<div class="pic-list">
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist4.jpg"><span>巴黎宝贝无忧童年</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist5.jpg"><span>用镜头记录生活</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist6.jpg"><span>与天水相连狼毒花</span>	
+        								</a>
+        							</div>
+        							<div class="pic-content-list">
+        								<ul class="list-a">
+        									<li><a href="http://blog.sina.com.cn/s/blog_1515cbfd80102x1cs.html" target="_blank">张柏芝凭什么不能谈恋爱</a><a href="http://blog.sina.com.cn/s/blog_7964e4ec0102xlmn.html" target="_blank">   北电07明星班美女生存现状</a></li>
+        									<li><a target="_blank" href="http://sports.sina.com.cn/zl/football/2017-08-23/zldoc-ifykcypq4217657.shtml">上港4比0踏遍恒大每一寸尊严</a> <a target="_blank" href="http://sports.sina.com.cn/zl/basketball/2017-08-23/zldoc-ifykcppy0580298.shtml">为凯尔特人和欧文高兴</a></li>
+        									<li><a target="_blank" href="http://finance.sina.com.cn/zl/china/2017-08-23/zl-ifykcqaw0845884.shtml">下半年央企兼并重组将加速</a> <a target="_blank" href="http://tech.sina.com.cn/csj/2017-08-23/doc-ifykcppy0548514.shtml">郭敬明的欲望与权力的消逝</a></li>
+        									<li><a href="http://fashion.sina.com.cn/zl/fashion/2017-08-21/doc-ifykcypq2412191.shtml" target="_blank" class="linkRed01">如何用基础单品穿出好品味</a> <a target="_blank" href="http://blog.sina.com.cn/s/blog_15f3c061f0102x7m4.html">女童保护讲师曝被性侵经历</a></li>
+        								</ul>
+        							</div>
+        						</div>
+        							<!--
+                                    	作者：1289885769@qq.com
+                                    	时间：2017-08-23
+                                    	描述：新闻切换
+                                    -->
+                                <div class="tab-cont3">
+        							<div class="pic-list">
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist7.jpg"><span>俄空袭歼灭IS分子</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist8.jpg"><span>属于骑士的记忆</span>	
+        								</a>
+        								<a class="uni-blk-pic" href="http://slide.news.sina.com.cn/slide_1_86058_198450.html" target="_blank">
+        									<img src="img/picList/piclist9.jpg"><span>孙俪晒多多吃饭</span>	
+        								</a>
+        							</div>
+        							<div class="pic-content-list">
+        								<ul class="list-a">
+        									<li><a target="_blank" href="http://finance.sina.com.cn/manage/crz/2017-08-23/doc-ifykcypq4331719.shtml">商人郭敬明：10年1.42亿版税收入 4家公司高管</a></li>
+        									<li><a target="_blank" href="http://slide.news.sina.com.cn/slide_1_86058_198407.html" class="liveNewsLeft photoNewsLeft">17岁的她已享天伦之乐</a> <a target="_blank" href="http://slide.news.sina.com.cn/s/slide_1_86058_198489.html">70,80和90后保温杯找共鸣</a></li>
+        									<li><a target="_blank" href="http://sports.sina.com.cn/nba/">达成!骑士用欧文换小刺客</a> <a target="_blank" href="http://sports.sina.com.cn/basketball/nba/2017-08-23/doc-ifykcppy0527202.shtml">再续兄弟情?韦德或再入骑士</a></li>
+        									<li><a target="_blank" class="videoNewsLeft" href="http://ent.sina.com.cn/video/#251527829">陈妍希抱娃露宠溺微笑 </a> <a target="_blank" href="http://ent.sina.com.cn/video/#251528069" class="videoNewsLeft videoNewsLeft">曝满文军与妻子离婚 </a></li>
+        								</ul>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>  
+        		</div>
+        	</div>
+        </div>
+	</body>
+</html>
