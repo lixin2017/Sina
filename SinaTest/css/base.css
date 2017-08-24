@@ -117,6 +117,7 @@ a{
     clear: both;
     background-color: #fff;
     overflow: hidden;
+    height: 1300px;
 }
 .main-nav{
 	width: 1000px;
@@ -469,9 +470,13 @@ a{
 .list-a{
 	padding-left: 10px;
     line-height: 26px;
-    height: 26px;
     font-size: 14px;
     color: #E67902;
+    /*overflow: hidden;*/
+   
+}
+.list-a li{	
+	
 }
 .list-a a{
 	color: #122e67;
@@ -487,11 +492,69 @@ a.photoNewsLeft {
     background: url(http://i1.sinaimg.cn/dy/main/icon/photoNewsLeft2.gif) no-repeat 0 center;
     padding-left: 23px;
 }
-
-.tab-cont2 {
-	display: none;
-}
-.tab-cont3{
-	display: none;
+a.videoNewsLeft{
+	background: url(http://i1.sinaimg.cn/dy/deco/2013/0313/videoNewsLeft.gif) 0 50% no-repeat;
+    padding-left: 23px;
 }
 
+
+.head-selected{
+	background: #FFF;
+	border-top: 3px solid #E67902;
+}
+.clearfixlist{
+	display: block;
+	margin-bottom: 10px;
+	height: 110px;
+}
+.list-b{
+	float: left;
+	margin:0 0 0 20px;
+	line-height: 29px;
+}
+.uni-blk-pic2{
+	border: none;
+}
+
+.uni-blk-pic img{
+	width: 105px;
+    height: 90px;
+}
+
+.part-a-r{
+	float: left;
+	margin-left: 30px;
+}
+.newslist{
+	width: 345px;
+	height: 232px;
+	overflow: hidden;
+	
+}
+.newslist2{
+	width: 345px;
+	overflow: hidden;
+	height: 1600px;
+}
+.list-news-right{
+	padding-left: 20px;
+	line-height:27px ;
+}
+.switch-div3{
+	height: 700px;
+}
+
+.news-list-long{
+	display: none;
+	height: 1200px;
+	overflow: hidden;
+	float: left;
+}
+
+.mod-05{
+	margin-top:20px;
+}
+
+.list-rightmove{
+	padding-left: 20px;
+}

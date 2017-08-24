@@ -40,67 +40,24 @@ $(document).ready(function(){
 
 
 /*************新闻切换***********************/
+
 $(document).ready(function(){
-	var orderMenu=$('.order-menu span');
-	var test1=orderMenu.first();
-	var test2=orderMenu.slice(1,2);
-	var test3=orderMenu.last();	
-	var newsContent1=$('.tab-cont1');
-	var newsContent2=$('.tab-cont2');
-	var newsContent3=$('.tab-cont3');
-	test1.css({
-			'background': '#FFF',
-			'border-top': '3px solid #E67902'
+	function switchDiv(orderMenu,tabCont){
+		orderMenu.hover(function(){
+			var index=$(this).index();
+			$(this).addClass('head-selected').siblings().removeClass('head-selected');
+			tabCont.eq(index).css('display','block').siblings().css('display','none');
 		});	
-	test1.hover(function(){
-		newsContent1.css('display','block');
-		newsContent2.css('display','none');
-		newsContent3.css('display','none');
-		test1.css({
-			'background': '#FFF',
-			'border-top': '3px solid #E67902'
-		});	
-		test2.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-		test3.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-	});
-	test2.hover(function(){
-		newsContent1.css('display','none');
-		newsContent2.css('display','block');
-		newsContent3.css('display','none');
-		test2.css({
-			'background': '#FFF',
-			'border-top': '3px solid #E67902'
-		});	
-		test1.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-		test3.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-	});	
-	test3.hover(function(){
-		newsContent1.css('display','none');
-		newsContent2.css('display','none');
-		newsContent3.css('display','block');
-		test3.css({
-			'background': '#FFF',
-			'border-top': '3px solid #E67902'
-		});	
-		test1.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-		test2.css({
-			'background': 'none',
-			'border-top': 'none'
-		});
-	});
-});
+	}
+	var orderMenu=$('.switch-menu span');
+	var tabCont=$('.switch-div>div');
+	switchDiv(orderMenu,tabCont);
+	
+	var orderMenu2=$('.switch-menu2 span');
+	var tabCont2=$('.switch-div2>div');
+	switchDiv(orderMenu2,tabCont2);
+	
+	var orderMenu3=$('.switch-menu3 span');
+	var tabCont3=$('.switch-div3>div');
+	switchDiv(orderMenu3,tabCont3);
+})	
