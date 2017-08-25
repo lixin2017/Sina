@@ -100,6 +100,7 @@ a{
 		background: url(../img/搜索图标.png); no-repeat;
 		width: 64px;
 		height: 33px;
+		border: none;
 	}
 
 .now-wea-city{
@@ -117,7 +118,7 @@ a{
     clear: both;
     background-color: #fff;
     overflow: hidden;
-    height: 1300px;
+    height: 1200px;
 }
 .main-nav{
 	width: 1000px;
@@ -528,7 +529,6 @@ a.videoNewsLeft{
 }
 .newslist{
 	width: 345px;
-	height: 232px;
 	overflow: hidden;
 	
 }
@@ -539,7 +539,13 @@ a.videoNewsLeft{
 }
 .list-news-right{
 	padding-left: 20px;
-	line-height:27px ;
+	line-height:28px ;
+	margin: 6px 0 !important;
+	/*list-style: none;*/
+}
+.list-clear-height{
+	line-height:29px ;
+	
 }
 .switch-div3{
 	height: 700px;
@@ -602,4 +608,13 @@ a.videoNewsLeft{
 .clear-padding{
 	padding-right: 0 !important;
 }
+
+.order-menu-new{
+	margin-top: 10px;
+}
+.order-menu-new span{
+	padding: 0px 12px 0px 11px;
+	border-left: 1px solid #dbdee1 ;
+}
+
 
